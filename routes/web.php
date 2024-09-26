@@ -27,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::group(array('prefix' => '/admin', 'middleware' => ['admin']), function () {
         Route::post('/update/ticket-status', [TicketController::class, 'updateTicketStatus'])->name('update_ticket_status');
+        Route::get('/customers', [HomeController::class, 'customers'])->name('home.customers');
     });
     Route::group(array('prefix' => '/customer', 'middleware' => ['customer']), function () {
         Route::resource('ticket', TicketController::class);

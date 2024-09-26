@@ -74,4 +74,9 @@ class HomeController extends Controller
 
         return view('ticket', compact('tickets','getFrom'));
     }
+
+    public function customers(){
+        $customers = User::where('user_type', 2)->get();
+        return view('customers', compact('customers'));
+    }
 }

@@ -19,6 +19,13 @@
                     Closed Ticket
                 </a>
             </li>
+            @if(isAdmin())
+            <li class="nav-item p-2 w-100 rounded py-0">
+                <a href="{{route('home.customers')}}" class="nav-link align-middle px-1">
+                    Customer List
+                </a>
+            </li>
+            @endif
         </ul>
     </div>
 </div>
